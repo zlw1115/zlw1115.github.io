@@ -2,7 +2,7 @@
 layout:     post
 title:      JavaScript运行原理
 subtitle:   
-date:       2020-10-22
+date:       2022-10-22
 author:     zlw
 header-img: img/home.jpg
 catalog: 	 true
@@ -19,7 +19,7 @@ tags:
 3. 再由解释器（lgnition），将AST转成ByteCode（字节码）。同时会收集TurboFan优化所需的信息（比如函数参数的类型信息等）。如果函数只调用一次，lgnition会解释执行ByteCode.
 4. 如果一个函数被多次调用，那么会被标记成热点函数，那么会被编译器优化成机器码，提高代码的执行性能。TurboFan是一个编译器，可以将字节码编译为CPU可以直接执行的机器码。但是，机器码实际上也会被还原成ByteCode，当后续执行过程中，类型发生了变化（比如sum函数原来执行的是number类型，后来执行变成了string类型），之前优化的机器码并不能正确的处理运算，就会逆向的转换成字节码。
 
-![](E:\gitrepo\zlw1115.github.io\img\2022-10-24\v8引擎解析图.jpg)
+![](/img/2022-10-24/v8引擎解析图.jpg)
 
 ### 二、JavaScript执行过程
 
@@ -57,43 +57,43 @@ js引擎在执行代码之前，会在堆内存中创建一个全局对象：Glo
 
 **待执行代码**
 
-![](E:\gitrepo\zlw1115.github.io\img\2022-10-24\全局代码执行示例.png)
+![](/img/2022-10-24/全局代码执行示例.png)
 
 **执行前**
 
-![](E:\gitrepo\zlw1115.github.io\img\2022-10-24\01_全局代码的执行过程2.png)
+![](/img/2022-10-24/01_全局代码的执行过程2.png)
 
 
 
 **全局代码执行**
 
-![](E:\gitrepo\zlw1115.github.io\img\2022-10-24\全局代码执行.jpg)
+![](/img/2022-10-24/全局代码执行.jpg)
 
 ### 四、函数代码执行
 
 **待执行代码**
 
-![](E:\gitrepo\zlw1115.github.io\img\2022-10-24\函数代码执行示例.png)
+![](/img/2022-10-24/函数代码执行示例.png)
 
 **函数代码执行前**
 
-![](E:\gitrepo\zlw1115.github.io\img\2022-10-24\函数代码执行前.png)
+![](/img/2022-10-24/函数代码执行前.png)
 
 **函数代码执行**
 
-![](E:\gitrepo\zlw1115.github.io\img\2022-10-24\函数代码执行.png)
+![](/img/2022-10-24/函数代码执行.png)
 
 **函数代码多次执行**
 
-![](E:\gitrepo\zlw1115.github.io\img\2022-10-24\函数代码多次执行.jpg)
+![](/img/2022-10-24/函数代码多次执行.jpg)
 
-![](E:\gitrepo\zlw1115.github.io\img\2022-10-24\函数代码多次执行.png)
+![](/img/2022-10-24/函数代码多次执行.png)
 
 ### 五、闭包的访问
 
 **待执行代码**
 
-![](E:\gitrepo\zlw1115.github.io\img\2022-10-24\闭包的访问过程.png)
+![](/img/2022-10-24/闭包的访问过程.png)
 
 
 
