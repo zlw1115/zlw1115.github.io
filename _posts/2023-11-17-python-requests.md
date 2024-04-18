@@ -24,7 +24,9 @@ tags:
 
 #### 二、安装&使用
 
-`pip install request` `import request`
+`pip install request` 
+
+`import request`
 
 #### 三、背景
 
